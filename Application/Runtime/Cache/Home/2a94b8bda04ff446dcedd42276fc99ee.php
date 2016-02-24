@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="/thinkphp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/thinkphp/Public/global.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,43 +19,72 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid table-responsive">
-			<table class="table table-hover table-striped table-condensed">
-				<tr class="success">
-					<td>id</td><td>姓名</td><td>年龄</td><td>性别</td>
-				</tr>
-				<tr>
-					<td>1</td><td>张三</td><td>25</td><td>男</td>
-				</tr>
-				<tr>
-					<td>2</td><td>李四</td><td>30</td><td>女</td>
-				</tr>
-			</table>
-	</div>
-	<div class="container">
-		<div class="col-md-4">
-			
-		</div>
-		<div class="col-md-4">
-			<form class="form-inline">
-				<div class="form-group">
-					<label>用户名</label>
-				<input class="form-control focus" placeholder="请在这里输入用户名">
-				</div>
-				<div class="form-group">
-					<label>密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
-				<input class="form-control" name="用户名" type="password">
-				</div>
-				<div>
-				<button type="submit" class="btn btn-default disabled center-block">Submit</button>
-				</div>
-				<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-			</form>
-		</div>
-		<div class="col-md-4">
-		</div>
-		
-	</div>
+  <div class="container-fluid">
+  		<div class="row">
+		    <nav class="navbar navbar-inverse navbar-fixed-top">
+		      <div class="container-fluid">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">项目名称</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#">项目名称</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li><a href="#">Dashboard</a></li>
+		            <li><a href="#">Settings</a></li>
+		            <li><a href="#">Profile</a></li>
+		            <li><a href=<?php echo U('Login/quit');?>>退出</a></li>
+		          </ul>
+		          <form class="navbar-form navbar-right">
+		            <input type="text" class="form-control" placeholder="Search...">
+		          </form>
+		        </div>
+		      </div>
+		    </nav>  			
+  		</div>
+  		<div class="row">
+		        <div class="col-sm-3 col-md-2 sidebar">
+		          <ul class="nav nav-sidebar">
+		            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+		            <li><a href="#">Reports</a></li>
+		            <li><a href="#">Analytics</a></li>
+		            <li><a href="#">Export</a></li>
+		          </ul>
+		          <ul class="nav nav-sidebar">
+		            <li><a href="">Nav item</a></li>
+		            <li><a href="">Nav item again</a></li>
+		            <li><a href="">One more nav</a></li>
+		            <li><a href="">Another nav item</a></li>
+		            <li><a href="">More navigation</a></li>
+		          </ul>
+		          <ul class="nav nav-sidebar">
+		            <li><a href="">Nav item again</a></li>
+		            <li><a href="">One more nav</a></li>
+		            <li><a href="">Another nav item</a></li>
+		          </ul>
+		        </div>
+		        <div class="col-sm-9 col-md-10 main">
+		        </div>
+  		</div>
+  </div>
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/thinkphp/Public/jquery-1.12.1.js"></script>

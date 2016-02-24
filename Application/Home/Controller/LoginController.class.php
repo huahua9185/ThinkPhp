@@ -48,4 +48,8 @@ class LoginController extends Controller {
             $this->display();
         }
     }
+    public function quit(){
+        session(null);
+        $this->success('成功退出','index');
+    }
 }
