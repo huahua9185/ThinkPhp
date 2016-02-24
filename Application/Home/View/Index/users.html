@@ -1,0 +1,33 @@
+<extend name="base" />
+<block name="main">
+    <div class="panel panel-primary top">
+        <div class="panel-heading">用户列表</div>
+        <div class="panel-body">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr class="active">
+                        <td>序号</td>
+                        <td>用户名</td>
+                        <td>昵称</td>
+                        <td>状态</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <volist name="list" id="vo">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.account}</td>
+                        <td>{$vo.nickname}</td>
+                        <td><if condition="$vo.status neq 1">锁定
+                            <else/>正常
+                            </if>
+                        </td>
+                        <td><a class="btn btn-danger" href="" role="button">删除</a>
+                            <a class="btn btn-info" href="{:U('Home/Index/users_add')}" role="button">修改</a>
+                        </td>
+                    </tr>
+                </volist>
+            </table>
+        </div>
+    </div>
+</block>
