@@ -1,0 +1,174 @@
+[ 2016-02-25T13:56:49+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant Home - assumed 'Home' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant user_add - assumed 'user_add' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+
+[ 2016-02-25T13:57:36+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant Home - assumed 'Home' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant user_add - assumed 'user_add' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+
+[ 2016-02-25T13:57:40+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant Home - assumed 'Home' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant user_add - assumed 'user_add' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+
+[ 2016-02-25T13:57:51+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+NOTIC: [8] Use of undefined constant Home - assumed 'Home' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant users_add - assumed 'users_add' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+
+[ 2016-02-25T13:57:57+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant Home - assumed 'Home' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [8] Use of undefined constant users_add - assumed 'users_add' D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+NOTIC: [2] Division by zero D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\1a3fd133c3a583a21ffa2e340e281f4c.php 第 80 行.
+
+[ 2016-02-25T13:59:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T13:59:26+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:11+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:17+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:21+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:25+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:26+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:36+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:40+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:49+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:50+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:00:52+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:01:02+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `rbac_role` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_role`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `rbac_user` WHERE `account` = 'tttt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `rbac_role_user` [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `rbac_user` (`account`,`password`,`nickname`,`email`,`status`,`create_time`) VALUES ('tttt','32bf0e6fcff51e53bd74e70ba1d622b2','tttt','tttt','1','1456380062') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `rbac_role_user` (`role_id`,`user_id`) VALUES ('1','65') [ RunTime:0.0000s ]
+
+[ 2016-02-25T14:01:03+08:00 ] 127.0.0.1 /thinkphp/Home/Index/users.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `rbac_user` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `rbac_user`  [ RunTime:0.0000s ]
+
