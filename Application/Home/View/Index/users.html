@@ -1,7 +1,12 @@
 <extend name="base" />
 <block name="main">
     <div class="panel panel-primary top">
-        <div class="panel-heading">用户列表</div>
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-1">用户列表</div>
+                <a href="{:U('Home/Index/users_add')}" class="col-xs-1 col-xs-offset-9 btn btn-warning btn-xs">添加新用户</a>
+            </div>
+        </div>
         <div class="panel-body">
             <table class="table table-hover table-bordered text-center">
                 <thead>
@@ -9,6 +14,12 @@
                         <td>序号</td>
                         <td>用户名</td>
                         <td>昵称</td>
+                        <td>所属组</td>
+                        <td>创建时间</td>
+                        <td>修改时间</td>
+                        <td>登录次数</td>
+                        <td>上次登录时间</td>
+                        <td>登录IP</td>
                         <td>状态</td>
                         <td>操作</td>
                     </tr>
@@ -18,12 +29,18 @@
                         <td>{$vo.id}</td>
                         <td>{$vo.account}</td>
                         <td>{$vo.nickname}</td>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.create_time}</td>
+                        <td>{$vo.update_time}</td>
+                        <td>{$vo.login_count}</td>
+                        <td>{$vo.last_login_time}</td>
+                        <td>{$vo.last_login_ip}</td>
                         <td><if condition="$vo.status neq 1">锁定
                             <else/>正常
                             </if>
                         </td>
-                        <td><a class="btn btn-danger" href="" role="button">删除</a>
-                            <a class="btn btn-info" href="{:U('Home/Index/users_add')}" role="button">修改</a>
+                        <td><a class="btn btn-danger btn-xs" href="{:U('Home/Index/user_delete')}?id={$vo.id}" role="button">删除</a>
+                            <a class="btn btn-info btn-xs" href="{:U('Home/Index/users_add')}" role="button">修改</a>
                         </td>
                     </tr>
                 </volist>

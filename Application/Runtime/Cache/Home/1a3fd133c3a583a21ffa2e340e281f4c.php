@@ -77,7 +77,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">用户列表</div>
-                <a href="<?php echo U('Home/Index/users_add');?>" class="col-xs-1 col-xs-offset-9 btn btn-danger">添加新用户</a>
+                <a href="<?php echo U('Home/Index/users_add');?>" class="col-xs-1 col-xs-offset-9 btn btn-warning btn-xs">添加新用户</a>
             </div>
         </div>
         <div class="panel-body">
@@ -87,6 +87,7 @@
                         <td>序号</td>
                         <td>用户名</td>
                         <td>昵称</td>
+                        <td>所属组</td>
                         <td>创建时间</td>
                         <td>修改时间</td>
                         <td>登录次数</td>
@@ -100,6 +101,7 @@
                         <td><?php echo ($vo["id"]); ?></td>
                         <td><?php echo ($vo["account"]); ?></td>
                         <td><?php echo ($vo["nickname"]); ?></td>
+                        <td><?php echo ($vo["name"]); ?></td>
                         <td><?php echo ($vo["create_time"]); ?></td>
                         <td><?php echo ($vo["update_time"]); ?></td>
                         <td><?php echo ($vo["login_count"]); ?></td>
@@ -108,8 +110,8 @@
                         <td><?php if($vo["status"] != 1): ?>锁定
                             <?php else: ?>正常<?php endif; ?>
                         </td>
-                        <td><a class="btn btn-danger" href="<?php echo U('Home/Index/user_delete');?>?id=<?php echo ($vo["id"]); ?>" role="button">删除</a>
-                            <a class="btn btn-info" href="<?php echo U('Home/Index/users_add');?>" role="button">修改</a>
+                        <td><a class="btn btn-danger btn-xs" href="<?php echo U('Home/Index/user_delete');?>?id=<?php echo ($vo["id"]); ?>" role="button">删除</a>
+                            <a class="btn btn-info btn-xs" href="<?php echo U('Home/Index/users_add');?>" role="button">修改</a>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
