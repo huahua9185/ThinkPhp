@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>登录</title>
 
     <!-- Bootstrap -->
     <link href="/thinkphp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/thinkphp/Public/signin.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,28 +18,22 @@
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="bg-primary">
+  <body>
   <div class="container">
-          <div class="col-lg-4 col-lg-offset-5"><h4>欢迎登录计划生育药品管理系统</h1></div>
-          
-          <div class="col-lg-4 col-lg-offset-4">
-            
-            <form action="/thinkphp/Home/Login" method="post" class="form-horizontal">
-              <div class="form-group">
-                <label class="col-sm-3 control-label">用户名:</label>
-                <div class="col-sm-9"><input type="text" name="username" class="form-control"></div> 
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
-                <div class="col-sm-9"><input type="password" name="password" class="form-control"></div>
-                
-              </div>
-              <div class="form-group">
-              <div class="col-sm-9 col-sm-offset-3"><input type="submit"  value="提交" class="form-control btn btn-info"></div>
-              </div>
-              
-            </form>
-          </div>
+
+    <form class="form-signin" action="/thinkphp/Home/Login/index" method="post">
+      <h2 class="form-signin-heading text-center ">请登录后使用</h2>
+      <label for="account" class="sr-only">帐号</label>
+      <input type="text" id="account" name="username" class="form-control" placeholder="帐号" required autofocus>
+      <label for="inputPassword" class="sr-only">密码</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="密码" required>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">登&nbsp;&nbsp;录</button>
+    </form>
 
   </div>
 
@@ -48,7 +43,7 @@
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/thinkphp/Public/jquery-1.12.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/thinkphp/Public/bootstrap/js/bootstrap.min.js"></script>

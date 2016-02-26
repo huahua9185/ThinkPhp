@@ -3,8 +3,8 @@
     <div class="panel panel-primary top">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-xs-1">用户列表</div>
-                <a href="{:U('Home/Index/users_add')}" class="col-xs-1 col-xs-offset-9 btn btn-warning btn-xs">添加新用户</a>
+                <div class="col-xs-3">用户组列表</div>
+                <a href="{:U('Home/Index/group_add')}" class="col-xs-1 col-xs-offset-6 btn btn-warning btn-xs">添加用户组</a>
             </div>
         </div>
         <div class="panel-body">
@@ -12,14 +12,12 @@
                 <thead>
                     <tr class="active">
                         <td>序号</td>
-                        <td>用户名</td>
-                        <td>昵称</td>
-                        <td>所属组</td>
+                        <td>名称</td>
+                        <td>PID</td>
+                        <td>ename</td>
                         <td>创建时间</td>
                         <td>修改时间</td>
-                        <td>登录次数</td>
-                        <td>上次登录时间</td>
-                        <td>登录IP</td>
+                        <td>备注</td>
                         <td>状态</td>
                         <td>操作</td>
                     </tr>
@@ -27,14 +25,12 @@
                 <volist name="list" id="vo">
                     <tr>
                         <td>{$vo.id}</td>
-                        <td>{$vo.account}</td>
-                        <td>{$vo.nickname}</td>
                         <td>{$vo.name}</td>
+                        <td>{$vo.pid}</td>
+                        <td>{$vo.ename}</td>
                         <td>{$vo.create_time}</td>
                         <td>{$vo.update_time}</td>
-                        <td>{$vo.login_count}</td>
-                        <td>{$vo.last_login_time}</td>
-                        <td>{$vo.last_login_ip}</td>
+                        <td>{$vo.remark}</td>
                         <td><if condition="$vo.status neq 1">锁定
                             <else/>正常
                             </if>

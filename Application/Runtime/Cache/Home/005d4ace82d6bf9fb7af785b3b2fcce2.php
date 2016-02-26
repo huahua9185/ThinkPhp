@@ -73,46 +73,43 @@
 		<div class="col-md-10 col-md-offset-2">
 			
     <div class="panel panel-primary top">
-        <div class="panel-heading">添加用户</div>
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">用户组列表</div>
+                <a href="<?php echo U('Home/Index/group_add');?>" class="col-xs-1 col-xs-offset-6 btn btn-warning btn-xs">添加用户组</a>
+            </div>
+        </div>
         <div class="panel-body">
-            <form action="/thinkphp/Home/Index/users_add.html" method="post" class="form-horizontal">
-                <div class="form-group">
-                    <label for="account" class="col-sm-2 control-label">用户名:</label>
-                    <div class="col-sm-2"><input type="text" class="form-control" id="account" name="account"></div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">密码:</label>
-                    <div class="col-sm-2">
-                        <input type="password" class="form-control" id="password" name="password"></div>
-                </div>
-                <div class="form-group">
-                    <label for="confirm_password" class="col-sm-2 control-label">确认密码:</label>
-                    <div class="col-sm-2">
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password"></div>
-                </div>
-                <div class="form-group">
-                    <label for="nickname" class="col-sm-2 control-label">昵称:</label>
-                    <div class="col-sm-2"> <input type="text" class="form-control" id="nickname" name="nickname"></div>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="col-sm-2 control-label">邮箱:</label>
-                    <div class="col-sm-2"> <input type="text" class="form-control" id="email" name="email"></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">账户类型</label>
-                    <div class="col-sm-2">
-                        <select class="form-control" name="role_id">
-                            <?php if(is_array($group)): $i = 0; $__LIST__ = $group;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["id"]); ?>.<?php echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-2 col-sm-offset-2"><button type="submit" name="user_add"
-                                                                  class="btn btn-warning">增加用户
-                    </button></div>
-
-                </div>
-            </form>
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr class="active">
+                        <td>序号</td>
+                        <td>名称</td>
+                        <td>PID</td>
+                        <td>ename</td>
+                        <td>创建时间</td>
+                        <td>修改时间</td>
+                        <td>备注</td>
+                        <td>状态</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo["id"]); ?></td>
+                        <td><?php echo ($vo["name"]); ?></td>
+                        <td><?php echo ($vo["pid"]); ?></td>
+                        <td><?php echo ($vo["ename"]); ?></td>
+                        <td><?php echo ($vo["create_time"]); ?></td>
+                        <td><?php echo ($vo["update_time"]); ?></td>
+                        <td><?php echo ($vo["remark"]); ?></td>
+                        <td><?php if($vo["status"] != 1): ?>锁定
+                            <?php else: ?>正常<?php endif; ?>
+                        </td>
+                        <td><a class="btn btn-danger btn-xs" href="<?php echo U('Home/Index/user_delete');?>?id=<?php echo ($vo["id"]); ?>" role="button">删除</a>
+                            <a class="btn btn-info btn-xs" href="<?php echo U('Home/Index/user_edit');?>?id=<?php echo ($vo["id"]); ?>" role="button">修改</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+            </table>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8">
@@ -8,8 +8,8 @@
 	<title>Bootstrap 101 Template</title>
 
 	<!-- Bootstrap -->
-	<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="__PUBLIC__/global.css" rel="stylesheet">
+	<link href="/thinkphp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/thinkphp/Public/global.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
 						<li><a href="#">Dashboard</a></li>
 						<li><a href="#">Settings</a></li>
 						<li><a href="#">Profile</a></li>
-						<li><a href={:U('Login/quit')}>退出</a></li>
+						<li><a href=<?php echo U('Login/quit');?>>退出</a></li>
 					</ul>
 					<form class="navbar-form navbar-right">
 						<input type="text" class="form-control" placeholder="Search...">
@@ -50,9 +50,9 @@
 	<div class="row">
 		<div class="col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
-				<li><a href="{:U('Home/Index/users')}">用户管理
+				<li><a href="<?php echo U('Home/Index/users');?>">用户管理
 					<span class="sr-only">(current)</span></a></li>
-				<li><a href="{:U('Home/Index/gmanage')}">用户组管理</a></li>
+				<li><a href="<?php echo U('Home/Index/gmanage');?>">用户组管理</a></li>
 				<li><a href="#">权限管理</a></li>
 				<li><a href="#">Export</a></li>
 			</ul>
@@ -71,9 +71,39 @@
 		</div>
 
 		<div class="col-md-10 col-md-offset-2">
-			<block name="main">
+			
+    <div class="panel panel-primary top">
+        <div class="panel-heading">添加用户组</div>
+        <div class="panel-body">
+            <form action="/thinkphp/Home/Index/group_add.html" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">组名:</label>
+                    <div class="col-sm-2"><input type="text" class="form-control" id="name" name="name"></div>
+                </div>
+                <div class="form-group">
+                    <label for="pid" class="col-sm-2 control-label">PID</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="pid" name="pid"></div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">ename:</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="name" name="ename"></div>
+                </div>
+                <div class="form-group">
+                    <label for="remark" class="col-sm-2 control-label">备注:</label>
+                    <div class="col-sm-2"> <textarea class="form-control" id="remark" name="remark"></textarea></div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-2 col-sm-offset-2"><button type="submit"
+                                                                  class="btn btn-warning">确认添加
+                    </button></div>
 
-			</block>
+                </div>
+            </form>
+        </div>
+    </div>
+
 		</div>
 	</div>
 </div>
@@ -93,8 +123,8 @@
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="__PUBLIC__/jquery-1.12.1.js"></script>
+<script src="/thinkphp/Public/jquery-1.12.1.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script src="/thinkphp/Public/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
