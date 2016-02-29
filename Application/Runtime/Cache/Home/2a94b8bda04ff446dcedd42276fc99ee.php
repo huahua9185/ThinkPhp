@@ -340,8 +340,8 @@
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="/thinkphp/Public/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
+									<small>欢迎,</small>
+									<?php echo ($username); ?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -365,7 +365,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="<?php echo U('Home/Login/quit');?>">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>

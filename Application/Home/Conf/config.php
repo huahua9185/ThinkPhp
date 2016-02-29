@@ -9,6 +9,7 @@ return array(
 	'DB_PORT'             => '3306',
 	'DB_PREFIX'           => 'think_',
 	'APP_AUTOLOAD_PATH'   => '@.TagLib',
+	'ADMINISTRATOR'		  =>'1',
 	'SESSION_AUTO_START'  => true,
 	// 'TMPL_ACTION_ERROR'   => 'Public:success', // 默认错误跳转对应的模板文件
 	// 'TMPL_ACTION_SUCCESS' => 'Public:success', // 默认成功跳转对应的模板文件

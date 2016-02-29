@@ -1,17 +1,15 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class IndexController extends CommonController {
 
-
-    //主页默认方法
   public function index(){
+      $this->assign('username',session('username'));
       $this->display();
   }
 
-
-    //增加用户方法
   public function user_add(){
       $this->display();
   }
+
 }
