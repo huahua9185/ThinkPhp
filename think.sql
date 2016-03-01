@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016-02-29 16:37:11
+-- Generation Time: 2016-03-01 07:51:46
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -102,14 +102,16 @@ CREATE TABLE IF NOT EXISTS `think_members` (
   `update_time` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- 转存表中的数据 `think_members`
 --
 
 INSERT INTO `think_members` (`id`, `name`, `password`, `nickname`, `status`, `remark`, `create_time`, `update_time`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '管理员', 1, '', '2016-02-29 14:14:29', '2016-02-29 14:14:29');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '管理员', 1, '', '2016-02-29 14:14:29', '2016-02-29 14:14:29'),
+(2, 'zhangsan', 'zhangsan', '张三', 0, '我是张三', '2016-03-01 05:40:31', '2016-03-01 05:40:31'),
+(3, 'demo', 'demo', '演示用户', 1, '演示', '2016-03-01 05:14:12', '2016-03-01 05:14:12');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
