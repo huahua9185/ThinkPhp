@@ -1098,81 +1098,80 @@
                                     <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
                                     更新时间
                                 </th>
-                                <th class="hidden-480">Status</th>
+                                <th class="hidden-480">备注</th>
 
-                                <th></th>
+                                <th>操作</th>
                             </tr>
                             </thead>
 
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <a href="#">ace.com</a>
-                                </td>
-                                <td>$45</td>
-                                <td class="hidden-480">3,330</td>
-                                <td>Feb 12</td>
+                            <?php if(is_array($userinfo)): $i = 0; $__LIST__ = $userinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td><?php echo ($vo["id"]); ?></td>
+                                    <td><?php echo ($vo["name"]); ?></td>
+                                    <td><?php echo ($vo["nickname"]); ?></td>
+                                    <td class="hidden-480"><?php echo ($vo['status']?'<span class="label label-sm label-default">正常</span>':'<span class="label label-sm label-warning">禁用</span>'); ?></td>
+                                    <td><?php echo ($vo["create_time"]); ?></td>
 
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-warning">Expiring</span>
-                                </td>
-                                <td>aaa</td>
+                                    <td class="hidden-480">
+                                        <?php echo ($vo["update_time"]); ?>
+                                    </td>
+                                    <td><?php echo ($vo["remark"]); ?></td>
 
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-                                    </div>
-
-                                    <div class="hidden-md hidden-lg">
-                                        <div class="inline pos-rel">
-                                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-                                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                    <td>
+                                        <div class="hidden-sm hidden-xs btn-group">
+                                            <button class="btn btn-xs btn-success">
+                                                <i class="ace-icon fa fa-check bigger-120"></i>
                                             </button>
 
-                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-                                                <li>
-                                                    <a data-original-title="View" href="#" class="tooltip-info" data-rel="tooltip" title="">
+                                            <button class="btn btn-xs btn-info">
+                                                <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                            </button>
+
+                                            <button class="btn btn-xs btn-danger">
+                                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                            </button>
+
+                                            <button class="btn btn-xs btn-warning">
+                                                <i class="ace-icon fa fa-flag bigger-120"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="hidden-md hidden-lg">
+                                            <div class="inline pos-rel">
+                                                <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                    <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                    <li>
+                                                        <a data-original-title="View" href="#" class="tooltip-info" data-rel="tooltip" title="">
 																			<span class="blue">
 																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
 																			</span>
-                                                    </a>
-                                                </li>
+                                                        </a>
+                                                    </li>
 
-                                                <li>
-                                                    <a data-original-title="Edit" href="#" class="tooltip-success" data-rel="tooltip" title="">
+                                                    <li>
+                                                        <a data-original-title="Edit" href="#" class="tooltip-success" data-rel="tooltip" title="">
 																			<span class="green">
 																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 																			</span>
-                                                    </a>
-                                                </li>
+                                                        </a>
+                                                    </li>
 
-                                                <li>
-                                                    <a data-original-title="Delete" href="#" class="tooltip-error" data-rel="tooltip" title="">
+                                                    <li>
+                                                        <a data-original-title="Delete" href="#" class="tooltip-error" data-rel="tooltip" title="">
 																			<span class="red">
 																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																			</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+
                             </tbody>
                         </table>
                     </div><!-- /.span -->

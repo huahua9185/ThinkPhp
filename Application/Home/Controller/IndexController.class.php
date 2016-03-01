@@ -8,7 +8,10 @@ class IndexController extends CommonController {
       $this->display();
   }
 
-  public function user_add(){
+  public function user(){
+      $user=M('members');
+      $result=$user->select();
+      $this->assign('userinfo',$result);
       $this->display();
   }
 
