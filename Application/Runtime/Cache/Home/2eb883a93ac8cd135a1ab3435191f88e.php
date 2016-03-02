@@ -977,213 +977,225 @@
 					<!-- /section:basics/content.breadcrumbs -->
 					<div class="page-content">
 						
-        <!-- #section:settings.box -->
-        <div class="ace-settings-container" id="ace-settings-container">
-            <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-                <i class="ace-icon fa fa-cog bigger-130"></i>
-            </div>
+    <!-- #section:settings.box -->
+    <div class="ace-settings-container" id="ace-settings-container">
+        <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+            <i class="ace-icon fa fa-cog bigger-130"></i>
+        </div>
 
-            <div class="ace-settings-box clearfix" id="ace-settings-box">
-                <div class="pull-left width-50">
-                    <!-- #section:settings.skins -->
-                    <div class="ace-settings-item">
-                        <div class="pull-left">
-                            <select id="skin-colorpicker" class="hide">
-                                <option data-skin="no-skin" value="#438EB9">#438EB9</option>
-                                <option data-skin="skin-1" value="#222A2D">#222A2D</option>
-                                <option data-skin="skin-2" value="#C6487E">#C6487E</option>
-                                <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-                            </select><div class="dropdown dropdown-colorpicker">		<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="btn-colorpicker" style="background-color:#438EB9"></span></a><ul class="dropdown-menu dropdown-caret"><li><a class="colorpick-btn selected" href="#" style="background-color:#438EB9;" data-color="#438EB9"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#222A2D;" data-color="#222A2D"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#C6487E;" data-color="#C6487E"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#D0D0D0;" data-color="#D0D0D0"></a></li></ul></div>
-                        </div>
-                        <span>&nbsp; Choose Skin</span>
+        <div class="ace-settings-box clearfix" id="ace-settings-box">
+            <div class="pull-left width-50">
+                <!-- #section:settings.skins -->
+                <div class="ace-settings-item">
+                    <div class="pull-left">
+                        <select id="skin-colorpicker" class="hide">
+                            <option data-skin="no-skin" value="#438EB9">#438EB9</option>
+                            <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                            <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                            <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                        </select><div class="dropdown dropdown-colorpicker">		<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="btn-colorpicker" style="background-color:#438EB9"></span></a><ul class="dropdown-menu dropdown-caret"><li><a class="colorpick-btn selected" href="#" style="background-color:#438EB9;" data-color="#438EB9"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#222A2D;" data-color="#222A2D"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#C6487E;" data-color="#C6487E"></a></li><li><a class="colorpick-btn" href="#" style="background-color:#D0D0D0;" data-color="#D0D0D0"></a></li></ul></div>
                     </div>
+                    <span>&nbsp; Choose Skin</span>
+                </div>
 
-                    <!-- /section:settings.skins -->
+                <!-- /section:settings.skins -->
 
-                    <!-- #section:settings.navbar -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-navbar" type="checkbox">
-                        <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+                <!-- #section:settings.navbar -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-navbar" type="checkbox">
+                    <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+                </div>
+
+                <!-- /section:settings.navbar -->
+
+                <!-- #section:settings.sidebar -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-sidebar" type="checkbox">
+                    <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+                </div>
+
+                <!-- /section:settings.sidebar -->
+
+                <!-- #section:settings.breadcrumbs -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" type="checkbox">
+                    <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+                </div>
+
+                <!-- /section:settings.breadcrumbs -->
+
+                <!-- #section:settings.rtl -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox">
+                    <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+                </div>
+
+                <!-- /section:settings.rtl -->
+
+                <!-- #section:settings.container -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-add-container" type="checkbox">
+                    <label class="lbl" for="ace-settings-add-container">
+                        Inside
+                        <b>.container</b>
+                    </label>
+                </div>
+
+                <!-- /section:settings.container -->
+            </div><!-- /.pull-left -->
+
+            <div class="pull-left width-50">
+                <!-- #section:basics/sidebar.options -->
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-hover" type="checkbox">
+                    <label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+                </div>
+
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-compact" type="checkbox">
+                    <label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+                </div>
+
+                <div class="ace-settings-item">
+                    <input class="ace ace-checkbox-2" id="ace-settings-highlight" type="checkbox">
+                    <label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+                </div>
+
+                <!-- /section:basics/sidebar.options -->
+            </div><!-- /.pull-left -->
+        </div><!-- /.ace-settings-box -->
+    </div><!-- /.ace-settings-container -->
+
+    <!-- /section:settings.box -->
+    <div class="page-header">
+        <h1>
+            Form Elements
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                Common form elements and layouts
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_add" method="post">
+                <!-- #section:elements.form -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名</label>
+
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="text" name="name">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码</label>
 
-                    <!-- /section:settings.navbar -->
-
-                    <!-- #section:settings.sidebar -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-sidebar" type="checkbox">
-                        <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password" name="name">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 确认密码</label>
 
-                    <!-- /section:settings.sidebar -->
-
-                    <!-- #section:settings.breadcrumbs -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" type="checkbox">
-                        <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password" name="comfirm-password">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 昵称</label>
 
-                    <!-- /section:settings.breadcrumbs -->
-
-                    <!-- #section:settings.rtl -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox">
-                        <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="text" name="nickname">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 所属用户组</label>
 
-                    <!-- /section:settings.rtl -->
-
-                    <!-- #section:settings.container -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-add-container" type="checkbox">
-                        <label class="lbl" for="ace-settings-add-container">
-                            Inside
-                            <b>.container</b>
-                        </label>
+                    <div class="col-sm-4">
+                        <select class="form-control" id="form-field-select-2" multiple="multiple">
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
                     </div>
+                </div>
 
-                    <!-- /section:settings.container -->
-                </div><!-- /.pull-left -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 备注</label>
 
-                <div class="pull-left width-50">
-                    <!-- #section:basics/sidebar.options -->
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-hover" type="checkbox">
-                        <label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+                    <div class="col-sm-4">
+                        <textarea class="form-control" id="form-field-8" placeholder="Default Text"></textarea>
                     </div>
+                </div>
 
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-compact" type="checkbox">
-                        <label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+                <!-- /section:elements.form -->
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            提交
+                        </button>
+
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="reset">
+                            <i class="ace-icon fa fa-undo bigger-110"></i>
+                            重置
+                        </button>
                     </div>
-
-                    <div class="ace-settings-item">
-                        <input class="ace ace-checkbox-2" id="ace-settings-highlight" type="checkbox">
-                        <label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
-                    </div>
-
-                    <!-- /section:basics/sidebar.options -->
-                </div><!-- /.pull-left -->
-            </div><!-- /.ace-settings-box -->
-        </div><!-- /.ace-settings-container -->
-
-        <!-- /section:settings.box -->
-        <div class="page-header">
-            <h1>
-                权限管理
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    用户管理
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
-
-        <div class="row">
-            <div class="col-xs-12">
-                <!-- PAGE CONTENT BEGINS -->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <table id="simple-table" class="table table-striped table-bordered table-hover">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>用户名</th>
-                                <th>昵称</th>
-                                <th class="hidden-480">状态</th>
-
-                                <th>
-                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                    创建时间
-                                </th>
-                                <th>
-                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-                                    更新时间
-                                </th>
-                                <th class="hidden-480">Status</th>
-
-                                <th></th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    <a href="#">ace.com</a>
-                                </td>
-                                <td>$45</td>
-                                <td class="hidden-480">3,330</td>
-                                <td>Feb 12</td>
-
-                                <td class="hidden-480">
-                                    <span class="label label-sm label-warning">Expiring</span>
-                                </td>
-                                <td>aaa</td>
-
-                                <td>
-                                    <div class="hidden-sm hidden-xs btn-group">
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="ace-icon fa fa-check bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-info">
-                                            <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                        </button>
-
-                                        <button class="btn btn-xs btn-warning">
-                                            <i class="ace-icon fa fa-flag bigger-120"></i>
-                                        </button>
-                                    </div>
-
-                                    <div class="hidden-md hidden-lg">
-                                        <div class="inline pos-rel">
-                                            <button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
-                                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
-                                            </button>
-
-                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-                                                <li>
-                                                    <a data-original-title="View" href="#" class="tooltip-info" data-rel="tooltip" title="">
-																			<span class="blue">
-																				<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																			</span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a data-original-title="Edit" href="#" class="tooltip-success" data-rel="tooltip" title="">
-																			<span class="green">
-																				<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																			</span>
-                                                    </a>
-                                                </li>
-
-                                                <li>
-                                                    <a data-original-title="Delete" href="#" class="tooltip-error" data-rel="tooltip" title="">
-																			<span class="red">
-																				<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																			</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div><!-- /.span -->
-                </div><!-- /.row -->
-
-
-
-
-                <!-- PAGE CONTENT ENDS -->
-            </div><!-- /.col -->
-        </div><!-- /.row -->
+                </div>
+            </form>
+<!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
 
 					</div><!-- /.page-content -->
 				</div>

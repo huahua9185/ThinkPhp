@@ -771,7 +771,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="<?php echo U('Home/Index/user_add');?>">
+								<a href="<?php echo U('Home/Index/user');?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									用户管理
 								</a>

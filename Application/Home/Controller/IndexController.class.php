@@ -14,5 +14,10 @@ class IndexController extends CommonController {
       $this->assign('userinfo',$result);
       $this->display();
   }
-
+  public function user_add(){
+      $user=D('Members');
+      $a=$user->create();
+      print_r($a);
+      $this->display();
+  }
 }
