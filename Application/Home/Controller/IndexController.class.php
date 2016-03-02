@@ -8,16 +8,31 @@ class IndexController extends CommonController {
       $this->display();
   }
 
+    /**
+     * 用户信息列表
+     */
   public function user(){
-      $user=M('members');
-      $result=$user->select();
-      $this->assign('userinfo',$result);
+      $user=D('members');
+      $this->assign('userinfo',$user->getUser());
       $this->display();
   }
+
+    /**
+     * 添加用户
+     */
   public function user_add(){
-      $user=D('Members');
-      $a=$user->create();
-      print_r($a);
+    if(IS_POST){
+        $user=D('Members');
+        if(!$user->create()){
+           $this->error($user->getError(),U('Home/Index/user_add'));
+        }
+        else{
+            $id=$user->add();
+            $this->success('添加成功',U('Home/Index/user'));
+        }
+
+
+    }
       $this->display();
   }
 }

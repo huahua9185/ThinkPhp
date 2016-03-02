@@ -1,328 +1,390 @@
-[ 2016-03-02T09:21:52+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T22:52:21+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+NOTIC: [8] Undefined variable: order C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 34 行.
+NOTIC: [8] Undefined variable: id C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 34 行.
+SQL: SELECT * FROM `think_members`  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
 
-[ 2016-03-02T09:22:36+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0020s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0020s ]
-SQL: SELECT * FROM `think_members`  [ RunTime:0.0010s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
-
-[ 2016-03-02T09:23:32+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T22:54:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0060s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-NOTIC: [8] Undefined variable: userinfo D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 1108 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+NOTIC: [8] Undefined variable: order C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 34 行.
+ERR: 1054:Unknown column 'think_auth_group_access.auid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members
+		.id=think_auth_group_access.auid  
+ERR: 1054:Unknown column 'think_auth_group_access.auid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members
+		.id=think_auth_group_access.auid  
 
-[ 2016-03-02T09:26:18+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T22:54:40+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0080s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0020s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members
+		.id=think_auth_group_access.uid   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
 
-[ 2016-03-02T09:30:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T22:57:18+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T22:59:41+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+ERR: 1146:Table 'think.auth_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join auth_group on think_auth_group_access
+		.group_id=think_group.id  
+ERR: 1146:Table 'think.auth_group' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join auth_group on think_auth_group_access
+		.group_id=think_group.id  
+
+[ 2016-03-02T23:00:06+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+ERR: 1054:Unknown column 'think_group.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_group.id  
+ERR: 1054:Unknown column 'think_group.id' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_group.id  
+
+[ 2016-03-02T23:02:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:02:27+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+
+[ 2016-03-02T23:03:40+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+
+[ 2016-03-02T23:03:57+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+ERR: 1054:Unknown column 'think_auth_group.aid' in 'on clause'
+ [ SQL语句 ] : SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.aid  
+
+[ 2016-03-02T23:04:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
 SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
 
-[ 2016-03-02T09:30:55+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:05:09+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:05:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:05:43+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:06:56+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:07:11+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
 
-[ 2016-03-02T09:31:31+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:10:02+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0040s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `think_members` WHERE `name` = 'test' LIMIT 1   [ RunTime:0.0010s ]
 
-[ 2016-03-02T09:32:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:10:06+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
 
-[ 2016-03-02T09:36:04+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:36:54+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:37:44+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:38:01+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:38:07+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:38:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:38:17+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:39:58+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:40:37+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:41:37+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:42:45+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:43:47+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:10:12+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0040s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `think_members` WHERE `name` = 'aaa' LIMIT 1   [ RunTime:0.0000s ]
 
-[ 2016-03-02T09:44:18+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0020s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:45:34+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:10:16+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+
+[ 2016-03-02T23:10:26+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0040s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
 SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
 SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `think_members` WHERE `name` = 'test' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `think_members` (`name`,`password`,`nickname`,`remark`,`status`,`create_time`) VALUES ('test','47bce5c74f589f4867dbd57e9ca9f808','aaa','aaa','1','1456931426') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
 
-[ 2016-03-02T09:46:32+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
+[ 2016-03-02T23:10:27+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
 
-[ 2016-03-02T09:49:07+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:52:31+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0100s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T09:53:50+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0100s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
-
-[ 2016-03-02T15:21:11+08:00 ] 127.0.0.1 /thinkphp/
+[ 2016-03-02T23:10:52+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:10:58+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `think_members` WHERE `name` = 'test1' LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: auto C:\wamp\www\thinkphp\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `think_members` (`name`,`password`,`nickname`,`remark`,`status`,`create_time`) VALUES ('test1','698d51a19d8a121ce581499d7b701668','aaa','aaa','1','1456931458') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\2eb883a93ac8cd135a1ab3435191f88e.php 第 344 行.
+
+[ 2016-03-02T23:15:59+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0040s ]
+SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 1 for Home\Model\MembersModel::getUser(), called in C:\wamp\www\thinkphp\Application\Home\Controller\IndexController.class.php on line 16 and defined C:\wamp\www\thinkphp\Application\Home\Model\MembersModel.class.php 第 30 行.
+SQL: SELECT * FROM `think_members` left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: username C:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+
+[ 2016-03-02T23:16:59+08:00 ] 127.0.0.1 /thinkphp/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0040s ]
 SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='' and g.status='1' )  [ RunTime:0.0000s ]
 
-[ 2016-03-02T15:21:14+08:00 ] 127.0.0.1 /thinkphp/Home/Login/index.html
+[ 2016-03-02T23:17:03+08:00 ] 127.0.0.1 /thinkphp/Home/Login/index.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
-
-[ 2016-03-02T15:21:41+08:00 ] 127.0.0.1 /thinkphp/Home/Login/index.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0030s ]
-SQL: SELECT * FROM `think_members` WHERE `name` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
-NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\thinkphp\ThinkPHP\Common\functions.php 第 1263 行.
-
-[ 2016-03-02T15:21:42+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0030s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0030s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-
-[ 2016-03-02T15:28:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
-SQL: SHOW COLUMNS FROM `think_auth_group_access` [ RunTime:0.0000s ]
-SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM think_auth_group_access a INNER JOIN think_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.0000s ]
-SQL: SELECT `condition`,`name` FROM `think_auth_rule` WHERE `id` IN ('1','2','3','4','5','6') AND `status` = 1  [ RunTime:0.0000s ]
-SQL: SHOW COLUMNS FROM `think_members` [ RunTime:0.0100s ]
-SQL: SELECT * FROM `think_members`  [ RunTime:0.0000s ]
-NOTIC: [8] Undefined variable: username D:\wamp\www\thinkphp\Application\Runtime\Cache\Home\008e2ad42cd616a4bbdd0e672155681c.php 第 344 行.
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 

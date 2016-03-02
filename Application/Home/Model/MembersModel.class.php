@@ -13,12 +13,28 @@ class MembersModel extends Model{
 		array('name','require','用户名必须填写',1),
 		array('password','require','密码必须填写',1),
 		array('repassword','require','密码重复必须填写',1),
-		array('name','','用户名重复',0,'unique',1),
+		array('name','','帐号名称已经存在！',0,'unique',1),
 		array('repassword','password','确认密码不正确',0,'confirm')
 	);
 	protected $_auto=array(
 		array('status','1'),
 		array('password','md5',3,'function'),
-		array('create_time','time',2,'function')
+		array('create_time',NOW_TIME,1),
+		array('update_time',NOW_TIME,2)
+
 	);
+
+	/**获取用户列表
+	 * @return mixed
+	 */
+	public function getUser($id){
+		return $this->join('left join think_auth_group_access on
+		think_members.id=think_auth_group_access.uid')->join('left join think_auth_group on think_auth_group_access
+		.group_id=think_auth_group.id')
+			->select();
+	}
+	public function  getGroup(){
+		$group=M('auth_group');
+		return $group->select();
+	}
 }
