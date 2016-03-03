@@ -6,8 +6,9 @@
  * Time: 15:06
  */
 namespace Home\Model;
-use Think\Model\RelationModel;
-class MembersModel extends RelationModel{
+use Think\Model\ViewModel;
+use Think\Model;
+class MembersModel extends ViewModel{
 	protected $_validate=array(
 		//array(验证字段1,验证规则,错误提示,[验证条件,附加规则,验证时间])
 		array('name','require','用户名必须填写',1),
@@ -23,16 +24,14 @@ class MembersModel extends RelationModel{
 		array('update_time',NOW_TIME,2)
 
 	);
-	//关联模型
-	protected $_link = array(
-		'auth_group'=>array(
-			'mapping_type'=>self::MANY_TO_MANY,
-			'class_name'=>'Auth_group',
-			'foreign_key'=>'uid',
-			'mapping_name'=>'auth_group',
-			'relation_foreign_key'  =>  'group_id',
-			'relation_table'=>'think_auth_group_access'
-		),
+	/**
+	 * @var array  定义视图模型，三张表 members,auth_group_access,auth_group
+	 */
+	public $viewFields=array(
+		'members'=>array('id','name','nickname','password','status','remark','create_time','update_time', '_type'=>'left'),
+		'auth_group_access'=>array('group_id','_on'=>'members.id=auth_group_access.uid','_type'=>'left' ),
+		'auth_group'=>array('title','_on'=>'auth_group_access.group_id=auth_group.id')
+
 	);
 	/**获取用户列表
 	 * @return mixed

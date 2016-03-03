@@ -1080,7 +1080,7 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_add.html" method="post">
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_add" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名</label>
@@ -1093,16 +1093,14 @@
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password"
-                               name="password">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password" name="password">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 确认密码</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password"
-                               name="repassword">
+                        <input id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" type="password" name="repassword">
                     </div>
                 </div>
                 <div class="form-group">
@@ -1117,18 +1115,7 @@
 
                     <div class="col-sm-4">
                         <select class="form-control" id="form-field-select-2" name="group">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
+                            <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$go): $mod = ($i % 2 );++$i;?><option value="<?php echo ($go["id"]); ?>"><?php echo ($go["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
                 </div>

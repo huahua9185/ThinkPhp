@@ -13,7 +13,7 @@ class IndexController extends CommonController {
      */
   public function user(){
       $user=D('members');
-      $this->assign('userinfo',$user->getUser());
+      $this->assign('userinfo',$user->relation(true)->select());
       $this->display();
   }
 
@@ -21,18 +21,11 @@ class IndexController extends CommonController {
      * 添加用户
      */
   public function user_add(){
+      $user=D('Members');
     if(IS_POST){
-        $user=D('Members');
-        if(!$user->create()){
-           $this->error($user->getError(),U('Home/Index/user_add'));
-        }
-        else{
-            $id=$user->add();
-            $this->success('添加成功',U('Home/Index/user'));
-        }
 
-
-    }
+        }
+      $this->assign('glist',$user->getGroup());
       $this->display();
   }
 }

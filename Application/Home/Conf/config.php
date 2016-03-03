@@ -11,6 +11,7 @@ return array(
 	'APP_AUTOLOAD_PATH'   => '@.TagLib',
 	'ADMINISTRATOR'		  =>'1',
 	'SESSION_AUTO_START'  => true,
+	'SHOW_PAGE_TRACE'	  =>ture,
 	// 'TMPL_ACTION_ERROR'   => 'Public:success', // 默认错误跳转对应的模板文件
 	// 'TMPL_ACTION_SUCCESS' => 'Public:success', // 默认成功跳转对应的模板文件
 	'URL_CASE_INSENSITIVE'  =>  false,   // 默认false 表示URL区分大小写 true则表示不区分大小写
