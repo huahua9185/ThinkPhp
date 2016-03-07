@@ -43,17 +43,20 @@ class MembersModel extends RelationModel{
 
 	);
 	/**获取用户列表
-	 * @return mixed
+	 * @return 用户信息
 	 */
-	public function addUser($id){
-		$group=M('auth_group_access');
+	public function userInfo(){
+		$group=M('members');
+		return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->order('a.id asc')->select();
 
 	}
-	public function getUser(){
-		return $this->select();
-	}
+
+	/**
+	 * @return 用户组列表
+	 */
 	public function  getGroup(){
 		$group=M('auth_group');
 		return $group->order('id asc')->select();
 	}
+
 }

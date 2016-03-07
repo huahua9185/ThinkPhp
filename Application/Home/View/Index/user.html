@@ -152,9 +152,9 @@
                                                 <i class="ace-icon fa fa-pencil bigger-120"></i>
                                             </button>
 
-                                            <button class="btn btn-xs btn-danger">
+                                            <a class="btn btn-xs btn-danger" href="{:U('Home/Index/user_del')}?id={$vo.id}">
                                                 <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                                            </button>
+                                            </a>
 
                                             <button class="btn btn-xs btn-warning">
                                                 <i class="ace-icon fa fa-flag bigger-120"></i>
@@ -200,6 +200,11 @@
 
                             </tbody>
                         </table>
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4">
+                                <a href="{:U('Home/Index/user_add')}" class="btn btn-primary btn-lg">添加用户</a>
+                            </div>
+                        </div>
                     </div><!-- /.span -->
                 </div><!-- /.row -->
 
