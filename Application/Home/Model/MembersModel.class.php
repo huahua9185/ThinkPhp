@@ -25,18 +25,30 @@ class MembersModel extends RelationModel{
 	);
 	//关联模型
 	protected $_link = array(
-		'auth_group'=>array(
-			'mapping_type'=>self::MANY_TO_MANY,
-			'class_name'=>'Auth_group',
+		'auth_group_access'=>array(
+			'mapping_type'=>self::HAS_ONE,
+			'class_name'=>'Auth_group_access',
 			'foreign_key'=>'uid',
-			'mapping_name'=>'auth_group',
-			'relation_foreign_key'  =>  'group_id',
-			'relation_table'=>'think_auth_group_access'
+			'mapping_name'=>'auth_group_access',
+			'as_fields'=>'group_id'
 		),
+		'auth_group' => array(
+			'mapping_type'      =>  self::MANY_TO_MANY,
+			'class_name'        =>  'auth_group',
+			'mapping_name'      =>  'groups',
+			'foreign_key'       =>  'id',
+			'relation_foreign_key'  =>  'id',
+			'relation_table'    =>  'think_auth_group' //此处应显式定义中间表名称，且不能使用C函数读取表前缀
+		)
+
 	);
 	/**获取用户列表
 	 * @return mixed
 	 */
+	public function addUser($id){
+		$group=M('auth_group_access');
+
+	}
 	public function getUser(){
 		return $this->select();
 	}

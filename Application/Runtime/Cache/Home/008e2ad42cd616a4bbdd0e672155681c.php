@@ -1110,7 +1110,7 @@
                                     <td><?php echo ($vo["name"]); ?></td>
                                     <td><?php echo ($vo["nickname"]); ?></td>
                                     <td class="hidden-480"><?php echo ($vo['status']?'<span class="label label-sm label-default">正常</span>':'<span class="label label-sm label-warning">禁用</span>'); ?></td>
-                                    <td><?php echo ($userinfo["auth_group:0:title)"]); ?></td>
+                                    <td><?php echo ($vo["title"]); ?></td>
                                     <td><?php echo ($vo["create_time"]); ?></td>
 
                                     <td class="hidden-480">
