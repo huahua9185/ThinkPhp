@@ -1124,9 +1124,10 @@
                                                 <i class="ace-icon fa fa-check bigger-120"></i>
                                             </button>
 
-                                            <button class="btn btn-xs btn-info">
+                                            <a class="btn btn-xs btn-info"
+                                               href="<?php echo U('Home/Index/user_edit');?>?id=<?php echo ($vo["id"]); ?>">
                                                 <i class="ace-icon fa fa-pencil bigger-120"></i>
-                                            </button>
+                                            </a>
 
                                             <a class="btn btn-xs btn-danger" href="<?php echo U('Home/Index/user_del');?>?id=<?php echo ($vo["id"]); ?>">
                                                 <i class="ace-icon fa fa-trash-o bigger-120"></i>

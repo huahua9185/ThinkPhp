@@ -1080,34 +1080,38 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_edit.html" method="post">
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_edit.html?id=16" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="用户名" class="col-xs-10 col-sm-5" type="text" name="name">
+                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="name"
+                               value="<?php echo ($info["name"]); ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="密码" class="col-xs-10 col-sm-5" type="password" name="password">
+                        <input id="form-field-1" value="***" class="col-xs-10 col-sm-5" type="password"
+                               name="password">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 确认密码</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="确认密码" class="col-xs-10 col-sm-5" type="password" name="repassword">
+                        <input id="form-field-1" value="***" class="col-xs-10 col-sm-5" type="password"
+                               name="repassword">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 昵称</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" placeholder="昵称" class="col-xs-10 col-sm-5" type="text" name="nickname">
+                        <input id="form-field-1" value="<?php echo ($info["nickname"]); ?>" class="col-xs-10 col-sm-5" type="text"
+                               name="nickname">
                     </div>
                 </div>
                 <div class="form-group">
@@ -1124,15 +1128,14 @@
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 备注</label>
 
                     <div class="col-sm-4">
-                        <textarea class="form-control" id="form-field-8" placeholder="备注信息"
-                                  name="remark"></textarea>
+                        <textarea class="form-control" id="form-field-8"  name="remark"><?php echo ($info["remark"]); ?></textarea>
                     </div>
                 </div>
 
                 <!-- /section:elements.form -->
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">
-                        <button class="btn btn-info" type="submit">
+                        <button class="btn btn-info" type="submit" name="<?php echo ($info["id"]); ?>">
                             <i class="ace-icon fa fa-check bigger-110"></i>
                             提交
                         </button>

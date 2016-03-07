@@ -56,9 +56,24 @@ class IndexController extends CommonController {
         }
 
     }
-    public function user_edit(){
+    public function user_edit($id=1){
         $user=D('members');
-        $this->assign('userinfo',$user->userInfo());
+        $id=I('get.id');
+        if(IS_POST){
+            if(!$user->create()){
+                exit($user->getError());
+            }else{
+                $map['id']=I('post.id');
+                var_dump($user->data());
+                $a=$user->relation('auth_group_access')->field('nickname,password,remark,status,group_id')->where($map)
+                    ->save();
+                var_dump($a);
+
+            }
+        }
+        $result=$user->userInfo($id);
+        $a=$result[0];
+        $this->assign('info',$a);
         $this->assign('glist',$user->getGroup());
         $this->display();
     }

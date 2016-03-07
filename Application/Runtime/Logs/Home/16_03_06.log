@@ -1,6 +1,0 @@
-[ 2016-03-06T21:33:36+08:00 ] 127.0.0.1 /thinkphp/Home/Index/user.html
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-NOTIC: [8] Use of undefined constant ture - assumed 'ture' C:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
-

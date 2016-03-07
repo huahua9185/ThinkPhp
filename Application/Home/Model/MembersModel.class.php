@@ -13,7 +13,7 @@ class MembersModel extends RelationModel{
 		array('name','require','用户名必须填写',1),
 		array('password','require','密码必须填写',1),
 		array('repassword','require','密码重复必须填写',1),
-		array('name','','帐号名称已经存在！',0,'unique',1),
+		//array('name','','帐号名称已经存在！',0,'unique',1),
 		array('repassword','password','确认密码不正确',0,'confirm')
 	);
 	protected $_auto=array(
@@ -45,9 +45,14 @@ class MembersModel extends RelationModel{
 	/**获取用户列表
 	 * @return 用户信息
 	 */
-	public function userInfo(){
+	public function userInfo($id=false){
 		$group=M('members');
-		return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->order('a.id asc')->select();
+		if($id){
+			return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->where("a
+			.id=$id")->order('a.id asc')->select();
+		}else{
+			return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->order('a.id asc')->select();
+		}
 
 	}
 
