@@ -1080,7 +1080,7 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="/thinkphp/Home/User/group_edit.html?id=2" method="post">
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/User/group_edit.html?id=1" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 组名</label>
@@ -1100,13 +1100,12 @@
                         <input id="radio-2" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="0" <?php if($group['status']==0) echo "checked='checked'" ;?>>禁用
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 权限</label>
-
-                    <div class="col-sm-9">
-                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="rules"
-                               value="<?php echo ($group["rules"]); ?>">
-                    </div>
+                <div class="row">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>
+                    <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$g): $mod = ($i % 2 );++$i;?><label class="checkbox-inline">
+                            <input type="checkbox"  name="rules" value="<?php echo ($g["id"]); ?>"
+                            <?php if($glist['id']==true) echo "checked='checked'" ;?>><?php echo ($g["title"]); ?>
+                        </label><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
                 <!-- /section:elements.form -->
                 <div class="clearfix form-actions">

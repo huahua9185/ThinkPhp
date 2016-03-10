@@ -105,7 +105,10 @@ class UserController extends CommonController {
         }
         $id=I('get.id');
         if($id){
+            $glist=$group->getRule($id);
+            dump($glist);
             $result=$group->find($id);
+            $this->assign('glist',$glist);
             $this->assign('group',$result);
             $this->display();
         }
@@ -118,7 +121,17 @@ class UserController extends CommonController {
      */
     public function group_add(){
         $rlist=D('AuthGroup');
-        dump($rlist->getRule());
+        if(IS_POST){
+           if($rlist->create()){
+               $rlist->add();
+               $this->success('添加成功',U('Home/User/group'));
+           }else{
+               $this->error('添加失败',U('Home/User/group'));
+           }
+
+        }
+        $glist=$rlist->table('think_auth_rule')->field('id,title')->select();
+        $this->assign('glist',$glist);
         $this->display();
     }
 }

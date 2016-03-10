@@ -123,13 +123,14 @@
                         <input id="radio-2" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="0" <?php if($group['status']==0) echo "checked='checked'" ;?>>禁用
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 权限</label>
-
-                    <div class="col-sm-9">
-                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="rules"
-                               value="{$group.rules}">
-                    </div>
+                <div class="row">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>
+                    <volist name="glist" id="g">
+                        <label class="checkbox-inline">
+                            <input type="checkbox"  name="rules" value="{$g.id}"
+                            <?php if($glist['id']==true) echo "checked='checked'" ;?>>{$g.title}
+                        </label>
+                    </volist>
                 </div>
                 <!-- /section:elements.form -->
                 <div class="clearfix form-actions">
