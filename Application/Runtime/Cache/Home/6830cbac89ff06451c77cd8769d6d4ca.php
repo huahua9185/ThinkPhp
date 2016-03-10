@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -9,35 +9,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.css" />
-		<link rel="stylesheet" href="__PUBLIC__/assets/css/font-awesome.css" />
+		<link rel="stylesheet" href="/thinkphp/Public/assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="/thinkphp/Public/assets/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="__PUBLIC__/assets/css/ace-fonts.css" />
+		<link rel="stylesheet" href="/thinkphp/Public/assets/css/ace-fonts.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="__PUBLIC__/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="/thinkphp/Public/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="__PUBLIC__/assets/css/ace-part2.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="/thinkphp/Public/assets/css/ace-part2.css" class="ace-main-stylesheet" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="__PUBLIC__/assets/css/ace-ie.css" />
+		  <link rel="stylesheet" href="/thinkphp/Public/assets/css/ace-ie.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="__PUBLIC__/assets/js/ace-extra.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace-extra.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="__PUBLIC__/assets/js/html5shiv.js"></script>
-		<script src="__PUBLIC__/assets/js/respond.js"></script>
+		<script src="/thinkphp/Public/assets/js/html5shiv.js"></script>
+		<script src="/thinkphp/Public/assets/js/respond.js"></script>
 		<![endif]-->
 	</head>
 
@@ -241,7 +241,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="__PUBLIC__/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="/thinkphp/Public/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -258,7 +258,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="__PUBLIC__/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="/thinkphp/Public/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -275,7 +275,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="__PUBLIC__/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="/thinkphp/Public/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -292,7 +292,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="__PUBLIC__/assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="/thinkphp/Public/assets/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -309,7 +309,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="__PUBLIC__/assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="/thinkphp/Public/assets/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -338,10 +338,10 @@
 						<!-- #section:basics/navbar.user_menu -->
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="__PUBLIC__/assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="/thinkphp/Public/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>欢迎,</small>
-									{$username}
+									<?php echo ($username); ?>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -365,7 +365,7 @@
 								<li class="divider"></li>
 
 								<li>
-									<a href="{:U('Home/Login/quit')}">
+									<a href="<?php echo U('Home/Login/quit');?>">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
@@ -428,7 +428,7 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="{:U('Home/Index/index')}">
+						<a href="<?php echo U('Home/Index/index');?>">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> 主页 </span>
 						</a>
@@ -771,7 +771,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="{:U('Home/Index/user')}">
+								<a href="<?php echo U('Home/User/user');?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									用户管理
 								</a>
@@ -780,7 +780,7 @@
 							</li>
 
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="<?php echo U('Home/User/group');?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									用户组管理
 								</a>
@@ -976,7 +976,7 @@
 
 					<!-- /section:basics/content.breadcrumbs -->
 					<div class="page-content">
-						<block name="page-content">
+						
 						<!-- #section:settings.box -->
 						<div class="ace-settings-container" id="ace-settings-container">
 							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
@@ -1618,7 +1618,7 @@
 															<div class="clearfix">
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Bob Doe's avatar" src="__PUBLIC__/assets/avatars/user.jpg" />
+																		<img alt="Bob Doe's avatar" src="/thinkphp/Public/assets/avatars/user.jpg" />
 																	</div>
 
 																	<div class="body">
@@ -1671,7 +1671,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Joe Doe's avatar" src="__PUBLIC__/assets/avatars/avatar2.png" />
+																		<img alt="Joe Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar2.png" />
 																	</div>
 
 																	<div class="body">
@@ -1724,7 +1724,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Jim Doe's avatar" src="__PUBLIC__/assets/avatars/avatar.png" />
+																		<img alt="Jim Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar.png" />
 																	</div>
 
 																	<div class="body">
@@ -1777,7 +1777,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Alex Doe's avatar" src="__PUBLIC__/assets/avatars/avatar5.png" />
+																		<img alt="Alex Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar5.png" />
 																	</div>
 
 																	<div class="body">
@@ -1798,7 +1798,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Bob Doe's avatar" src="__PUBLIC__/assets/avatars/avatar2.png" />
+																		<img alt="Bob Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar2.png" />
 																	</div>
 
 																	<div class="body">
@@ -1819,7 +1819,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Susan's avatar" src="__PUBLIC__/assets/avatars/avatar3.png" />
+																		<img alt="Susan's avatar" src="/thinkphp/Public/assets/avatars/avatar3.png" />
 																	</div>
 
 																	<div class="body">
@@ -1840,7 +1840,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Phil Doe's avatar" src="__PUBLIC__/assets/avatars/avatar4.png" />
+																		<img alt="Phil Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar4.png" />
 																	</div>
 
 																	<div class="body">
@@ -1861,7 +1861,7 @@
 
 																<div class="itemdiv memberdiv">
 																	<div class="user">
-																		<img alt="Alexa Doe's avatar" src="__PUBLIC__/assets/avatars/avatar1.png" />
+																		<img alt="Alexa Doe's avatar" src="/thinkphp/Public/assets/avatars/avatar1.png" />
 																	</div>
 
 																	<div class="body">
@@ -1903,7 +1903,7 @@
 															<div class="comments">
 																<div class="itemdiv commentdiv">
 																	<div class="user">
-																		<img alt="Bob Doe's Avatar" src="__PUBLIC__/assets/avatars/avatar.png" />
+																		<img alt="Bob Doe's Avatar" src="/thinkphp/Public/assets/avatars/avatar.png" />
 																	</div>
 
 																	<div class="body">
@@ -1959,7 +1959,7 @@
 
 																<div class="itemdiv commentdiv">
 																	<div class="user">
-																		<img alt="Jennifer's Avatar" src="__PUBLIC__/assets/avatars/avatar1.png" />
+																		<img alt="Jennifer's Avatar" src="/thinkphp/Public/assets/avatars/avatar1.png" />
 																	</div>
 
 																	<div class="body">
@@ -1993,7 +1993,7 @@
 
 																<div class="itemdiv commentdiv">
 																	<div class="user">
-																		<img alt="Joe's Avatar" src="__PUBLIC__/assets/avatars/avatar2.png" />
+																		<img alt="Joe's Avatar" src="/thinkphp/Public/assets/avatars/avatar2.png" />
 																	</div>
 
 																	<div class="body">
@@ -2027,7 +2027,7 @@
 
 																<div class="itemdiv commentdiv">
 																	<div class="user">
-																		<img alt="Rita's Avatar" src="__PUBLIC__/assets/avatars/avatar3.png" />
+																		<img alt="Rita's Avatar" src="/thinkphp/Public/assets/avatars/avatar3.png" />
 																	</div>
 
 																	<div class="body">
@@ -2097,7 +2097,7 @@
 													<div class="dialogs">
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="__PUBLIC__/assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="/thinkphp/Public/assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
@@ -2121,7 +2121,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="John's Avatar" src="__PUBLIC__/assets/avatars/avatar.png" />
+																<img alt="John's Avatar" src="/thinkphp/Public/assets/avatars/avatar.png" />
 															</div>
 
 															<div class="body">
@@ -2145,7 +2145,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Bob's Avatar" src="__PUBLIC__/assets/avatars/user.jpg" />
+																<img alt="Bob's Avatar" src="/thinkphp/Public/assets/avatars/user.jpg" />
 															</div>
 
 															<div class="body">
@@ -2170,7 +2170,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Jim's Avatar" src="__PUBLIC__/assets/avatars/avatar4.png" />
+																<img alt="Jim's Avatar" src="/thinkphp/Public/assets/avatars/avatar4.png" />
 															</div>
 
 															<div class="body">
@@ -2194,7 +2194,7 @@
 
 														<div class="itemdiv dialogdiv">
 															<div class="user">
-																<img alt="Alexa's Avatar" src="__PUBLIC__/assets/avatars/avatar1.png" />
+																<img alt="Alexa's Avatar" src="/thinkphp/Public/assets/avatars/avatar1.png" />
 															</div>
 
 															<div class="body">
@@ -2240,7 +2240,7 @@
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
-							</block>
+							
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
@@ -2283,56 +2283,56 @@
 
 		<!--[if !IE]> -->
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='/thinkphp/Public/assets/js/jquery.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='__PUBLIC__/assets/js/jquery1x.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='/thinkphp/Public/assets/js/jquery1x.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='__PUBLIC__/assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='/thinkphp/Public/assets/js/jquery.mobile.custom.js'>"+"<"+"/script>");
 		</script>
-		<script src="__PUBLIC__/assets/js/bootstrap.js"></script>
+		<script src="/thinkphp/Public/assets/js/bootstrap.js"></script>
 
 		<!-- page specific plugin scripts -->
 
 		<!--[if lte IE 8]>
-		  <script src="__PUBLIC__/assets/js/excanvas.js"></script>
+		  <script src="/thinkphp/Public/assets/js/excanvas.js"></script>
 		<![endif]-->
-		<script src="__PUBLIC__/assets/js/jquery-ui.custom.js"></script>
-		<script src="__PUBLIC__/assets/js/jquery.ui.touch-punch.js"></script>
-		<script src="__PUBLIC__/assets/js/jquery.easypiechart.js"></script>
-		<script src="__PUBLIC__/assets/js/jquery.sparkline.js"></script>
-		<script src="__PUBLIC__/assets/js/flot/jquery.flot.js"></script>
-		<script src="__PUBLIC__/assets/js/flot/jquery.flot.pie.js"></script>
-		<script src="__PUBLIC__/assets/js/flot/jquery.flot.resize.js"></script>
+		<script src="/thinkphp/Public/assets/js/jquery-ui.custom.js"></script>
+		<script src="/thinkphp/Public/assets/js/jquery.ui.touch-punch.js"></script>
+		<script src="/thinkphp/Public/assets/js/jquery.easypiechart.js"></script>
+		<script src="/thinkphp/Public/assets/js/jquery.sparkline.js"></script>
+		<script src="/thinkphp/Public/assets/js/flot/jquery.flot.js"></script>
+		<script src="/thinkphp/Public/assets/js/flot/jquery.flot.pie.js"></script>
+		<script src="/thinkphp/Public/assets/js/flot/jquery.flot.resize.js"></script>
 
 		<!-- ace scripts -->
-		<script src="__PUBLIC__/assets/js/ace/elements.scroller.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.colorpicker.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.fileinput.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.typeahead.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.wysiwyg.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.spinner.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.treeview.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.wizard.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/elements.aside.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.ajax-content.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.touch-drag.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.sidebar.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.sidebar-scroll-1.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.submenu-hover.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.widget-box.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.settings.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.settings-rtl.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.settings-skin.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.widget-on-reload.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.searchbox-autocomplete.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.scroller.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.colorpicker.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.fileinput.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.typeahead.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.wysiwyg.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.spinner.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.treeview.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.wizard.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.aside.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.ajax-content.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.touch-drag.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.sidebar.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.sidebar-scroll-1.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.submenu-hover.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.widget-box.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.settings.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.settings-rtl.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.settings-skin.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.widget-on-reload.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.searchbox-autocomplete.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
@@ -2555,16 +2555,16 @@
 		</script>
 
 		<!-- the following scripts are used in demo only for onpage help and you don't need them -->
-		<link rel="stylesheet" href="__PUBLIC__/assets/css/ace.onpage-help.css" />
-		<link rel="stylesheet" href="__PUBLIC__/docs/assets/js/themes/sunburst.css" />
+		<link rel="stylesheet" href="/thinkphp/Public/assets/css/ace.onpage-help.css" />
+		<link rel="stylesheet" href="/thinkphp/Public/docs/assets/js/themes/sunburst.css" />
 
-		<script type="text/javascript"> ace.vars['base'] = '__PUBLIC__'; </script>
-		<script src="__PUBLIC__/assets/js/ace/elements.onpage-help.js"></script>
-		<script src="__PUBLIC__/assets/js/ace/ace.onpage-help.js"></script>
-		<script src="__PUBLIC__/docs/assets/js/rainbow.js"></script>
-		<script src="__PUBLIC__/docs/assets/js/language/generic.js"></script>
-		<script src="__PUBLIC__/docs/assets/js/language/html.js"></script>
-		<script src="__PUBLIC__/docs/assets/js/language/css.js"></script>
-		<script src="__PUBLIC__/docs/assets/js/language/javascript.js"></script>
+		<script type="text/javascript"> ace.vars['base'] = '/thinkphp/Public'; </script>
+		<script src="/thinkphp/Public/assets/js/ace/elements.onpage-help.js"></script>
+		<script src="/thinkphp/Public/assets/js/ace/ace.onpage-help.js"></script>
+		<script src="/thinkphp/Public/docs/assets/js/rainbow.js"></script>
+		<script src="/thinkphp/Public/docs/assets/js/language/generic.js"></script>
+		<script src="/thinkphp/Public/docs/assets/js/language/html.js"></script>
+		<script src="/thinkphp/Public/docs/assets/js/language/css.js"></script>
+		<script src="/thinkphp/Public/docs/assets/js/language/javascript.js"></script>
 	</body>
 </html>

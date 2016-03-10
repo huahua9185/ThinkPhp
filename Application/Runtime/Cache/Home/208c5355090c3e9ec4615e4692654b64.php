@@ -771,7 +771,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="<?php echo U('Home/Index/user');?>">
+								<a href="<?php echo U('Home/User/user');?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									用户管理
 								</a>
@@ -780,7 +780,7 @@
 							</li>
 
 							<li class="">
-								<a href="jqgrid.html">
+								<a href="<?php echo U('Home/User/group');?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									用户组管理
 								</a>
@@ -1080,62 +1080,38 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="/thinkphp/Home/Index/user_edit.html?id=16" method="post">
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/User/group_edit.html?id=2" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名</label>
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 组名</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="name"
-                               value="<?php echo ($info["name"]); ?>">
+                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="title"
+                               value="<?php echo ($group["title"]); ?>">
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 状态</label>
+
+                    <div class="col-sm-1" >
+                        <input id="radio-1" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="1" <?php if($group['status']==1) echo "checked='checked'" ;?>>启用
+                    </div>
+                    <div class="col-sm-1">
+                        <input id="radio-2" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="0" <?php if($group['status']==0) echo "checked='checked'" ;?>>禁用
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 密码</label>
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 权限</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1" value="***" class="col-xs-10 col-sm-5" type="password"
-                               name="password">
+                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="rules"
+                               value="<?php echo ($group["rules"]); ?>">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 确认密码</label>
-
-                    <div class="col-sm-9">
-                        <input id="form-field-1" value="***" class="col-xs-10 col-sm-5" type="password"
-                               name="repassword">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 昵称</label>
-
-                    <div class="col-sm-9">
-                        <input id="form-field-1" value="<?php echo ($info["nickname"]); ?>" class="col-xs-10 col-sm-5" type="text"
-                               name="nickname">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 所属用户组</label>
-
-                    <div class="col-sm-4">
-                        <select class="form-control" id="form-field-select-2" name="group_id">
-                            <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$go): $mod = ($i % 2 );++$i;?><option value="<?php echo ($go["id"]); ?>"><?php echo ($go["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 备注</label>
-
-                    <div class="col-sm-4">
-                        <textarea class="form-control" id="form-field-8"  name="remark"><?php echo ($info["remark"]); ?></textarea>
-                    </div>
-                </div>
-
                 <!-- /section:elements.form -->
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">
-                        <button class="btn btn-info" type="submit" name="<?php echo ($info["id"]); ?>">
+                        <button class="btn btn-info" type="submit" name='id' value="<?php echo ($group["id"]); ?>">
                             <i class="ace-icon fa fa-check bigger-110"></i>
                             提交
                         </button>
