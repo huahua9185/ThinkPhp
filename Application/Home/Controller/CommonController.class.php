@@ -16,6 +16,9 @@ class CommonController extends Controller {
                 $this->error('没有权限');
             }
 
+
         }
+        dump($_SESSION);
+
     }
 }
