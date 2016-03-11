@@ -128,7 +128,7 @@
                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>
                    <volist name="glist" id="g">
                        <label class="checkbox-inline">
-                           <input type="checkbox"  name="rules" value="{$g.id}">{$g.title}
+                           <input type="checkbox"  name="rules[]" value="{$g.id}">{$g.title}
                        </label>
                    </volist>
                </div>

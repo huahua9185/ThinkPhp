@@ -787,6 +787,14 @@
 
 								<b class="arrow"></b>
 							</li>
+							<li class="">
+								<a href="<?php echo U('Home/User/rule');?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									规则管理
+								</a>
+
+								<b class="arrow"></b>
+							</li>
 						</ul>
 					</li>
 
@@ -1080,7 +1088,7 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="/thinkphp/Home/User/group_edit.html?id=1" method="post">
+            <form class="form-horizontal" role="form" action="/thinkphp/Home/User/group_edit.html?id=13" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 组名</label>
@@ -1103,8 +1111,7 @@
                 <div class="row">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>
                     <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$g): $mod = ($i % 2 );++$i;?><label class="checkbox-inline">
-                            <input type="checkbox"  name="rules" value="<?php echo ($g["id"]); ?>"
-                            <?php if($glist['id']==true) echo "checked='checked'" ;?>><?php echo ($g["title"]); ?>
+                            <input type="checkbox"  name="rules[]" value="<?php echo ($g["id"]); ?>" aa="<?php echo ($g["id"]); ?>"><?php echo ($g["title"]); ?>
                         </label><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
                 <!-- /section:elements.form -->

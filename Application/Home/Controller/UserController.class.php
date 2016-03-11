@@ -30,7 +30,7 @@ class UserController extends CommonController {
             $data['uid']=$id;
             $data['group_id']=I('post.group_id');
             $user->table('think_auth_group_access')->field('uid,group_id')->data($data)->add();
-            $this->success('添加成功',U('Home/Index/user'));
+            $this->success('添加成功',U('Home/User/user'));
 
         }
     }
@@ -49,10 +49,10 @@ class UserController extends CommonController {
         $user=D('members');
         $result=$user->relation('auth_group_access')->delete($id);
         if($result){
-            $this->success('删除成功',U('Home/Index/user'));
+            $this->success('删除成功',U('Home/User/user'));
         }
         else{
-            $this->error('删除失败',U('Home/Index/user'));
+            $this->error('删除失败',U('Home/User/user'));
         }
 
     }
@@ -67,9 +67,9 @@ class UserController extends CommonController {
                     'group_id'=>I('post.group_id'),
                 );
                 if($user->relation('auth_group_access')->save()){
-                    $this->success('修改成功',U('Home/Index/user'));
+                    $this->success('修改成功',U('Home/User/user'));
                 }else{
-                    $this->error('修改失败',U('Home/Index/user'));
+                    $this->error('修改失败',U('Home/User/user'));
                 }
 
 
@@ -96,7 +96,7 @@ class UserController extends CommonController {
         $group=D('auth_group');
         if(IS_POST){
             if($group->create()){
-                //dump($group->data());
+                $group->rules=implode(",",I('post.rules'));;
                 $group->save();
                 $this->success('修改成功',U('Home/User/group'));
             }else{
@@ -105,10 +105,9 @@ class UserController extends CommonController {
         }
         $id=I('get.id');
         if($id){
-            $glist=$group->getRule($id);
-            dump($glist);
+            $gl=$group->table('think_auth_rule')->field('id,title')->select();
             $result=$group->find($id);
-            $this->assign('glist',$glist);
+            $this->assign('glist',$gl);
             $this->assign('group',$result);
             $this->display();
         }
@@ -123,6 +122,8 @@ class UserController extends CommonController {
         $rlist=D('AuthGroup');
         if(IS_POST){
            if($rlist->create()){
+               $rlist->rules=implode(",",I('post.rules'));
+               dump($rlist->data());
                $rlist->add();
                $this->success('添加成功',U('Home/User/group'));
            }else{
@@ -132,6 +133,86 @@ class UserController extends CommonController {
         }
         $glist=$rlist->table('think_auth_rule')->field('id,title')->select();
         $this->assign('glist',$glist);
+        $this->display();
+    }
+    /**
+     * 删除用户组
+     */
+    public function group_del(){
+        $id=I('get.id');
+        $groups=D('AuthGroup');
+        $result=$groups->delete($id);
+        if($result){
+            $this->success('删除成功',U('Home/User/group'));
+        }
+        else{
+            $this->error('删除失败',U('Home/User/group'));
+        }
+    }
+
+    /**
+     *规则列表
+     */
+    public function rule(){
+        $rules=M('auth_rule');
+        $this->assign('rinfo',$rules->select());
+        $this->display();
+    }
+    /**
+     * 添加规则
+     */
+    public function rule_add(){
+        $rule=M("auth_rule");
+        if($_POST){
+            if($rule->create()){
+               $rule->add();
+                $this->success('添加成功',U('Home/User/rule'));
+            }else{
+                $this->error('添加失败',U('Home/User/rule'));
+            }
+        }
+        $this->display();
+    }
+    /**
+     * 删除规则
+     */
+    public function rule_del($id=null){
+        $id=I('get.id');
+        if($id){
+            $rule=M('auth_rule');
+            $result=$rule->delete($id);
+            if($result){
+                $this->success('删除成功',U('Home/User/rule'));
+            }
+            else{
+                $this->error('删除失败',U('Home/User/rule'));
+            }
+        }else{
+            $this->error('参数错误',U('Home/User/rule'));
+        }
+    }
+    /**
+     * 权限编辑
+     */
+    public function rule_edit($id=null){
+        $rule=M('auth_rule');
+        if($_POST){
+            if($rule->create()){
+                $rule->save();
+                $this->success('修改成功',U('Home/User/rule'));
+            }else{
+                $this->error('修改失败');
+            }
+        }
+        $id=I('get.id');
+        if($id){
+            $result=$rule->find($id);
+            if($result){
+                $this->assign('rule',$result);
+            }else{
+                $this->error('参数错误');
+            }
+        }
         $this->display();
     }
 }

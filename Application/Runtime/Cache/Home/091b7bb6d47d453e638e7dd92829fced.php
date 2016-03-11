@@ -1080,7 +1080,7 @@
                 权限管理
                 <small>
                     <i class="ace-icon fa fa-angle-double-right"></i>
-                    用户组管理
+                    用户管理
                 </small>
             </h1>
         </div><!-- /.page-header -->
@@ -1095,27 +1095,45 @@
                             <tr>
                                 <th>ID</th>
                                 <th>用户名</th>
-                                <th>权限</th>
-                                <th>状态</th>
+                                <th>昵称</th>
+                                <th class="hidden-480">状态</th>
+                                <th>所属组</th>
+                                <th>
+                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                    创建时间
+                                </th>
+                                <th>
+                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                    更新时间
+                                </th>
+                                <th class="hidden-480">备注</th>
+
                                 <th>操作</th>
                             </tr>
                             </thead>
 
                             <tbody>
-                            <?php if(is_array($glist)): $i = 0; $__LIST__ = $glist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <?php if(is_array($userinfo)): $i = 0; $__LIST__ = $userinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                     <td><?php echo ($vo["id"]); ?></td>
-                                    <td><?php echo ($vo["title"]); ?></td>
-                                    <td><?php echo ($vo["rules"]); ?></td>
+                                    <td><?php echo ($vo["name"]); ?></td>
+                                    <td><?php echo ($vo["nickname"]); ?></td>
                                     <td class="hidden-480"><?php echo ($vo['status']?'<span class="label label-sm label-default">正常</span>':'<span class="label label-sm label-warning">禁用</span>'); ?></td>
+                                    <td><?php echo ($vo["title"]); ?></td>
+                                    <td><?php echo ($vo["create_time"]); ?></td>
+
+                                    <td class="hidden-480">
+                                        <?php echo ($vo["update_time"]); ?>
+                                    </td>
+                                    <td><?php echo ($vo["remark"]); ?></td>
+
                                     <td>
                                         <div class="hidden-sm hidden-xs btn-group">
-
                                             <a class="btn btn-xs btn-info"
-                                               href="<?php echo U('Home/User/group_edit');?>?id=<?php echo ($vo["id"]); ?>">
+                                               href="<?php echo U('Home/User/user_edit');?>?id=<?php echo ($vo["id"]); ?>">
                                                 <i class="ace-icon fa fa-pencil bigger-120"></i>
                                             </a>
 
-                                            <a class="btn btn-xs btn-danger" href="<?php echo U('Home/User/group_del');?>?id=<?php echo ($vo["id"]); ?>">
+                                            <a class="btn btn-xs btn-danger" href="<?php echo U('Home/User/user_del');?>?id=<?php echo ($vo["id"]); ?>">
                                                 <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                             </a>
                                         </div>
@@ -1160,7 +1178,7 @@
                         </table>
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4">
-                                <a href="<?php echo U('Home/User/group_add');?>" class="btn btn-primary btn-lg">添加用户组</a>
+                                <a href="<?php echo U('Home/User/user_add');?>" class="btn btn-primary btn-lg">添加用户</a>
                             </div>
                         </div>
                     </div><!-- /.span -->

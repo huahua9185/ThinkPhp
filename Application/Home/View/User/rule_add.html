@@ -92,10 +92,10 @@
     <!-- /section:settings.box -->
     <div class="page-header">
         <h1>
-            用户管理
+            规则管理
             <small>
                 <i class="ace-icon fa fa-angle-double-right"></i>
-                修改用户
+                添加规则
             </small>
         </h1>
     </div><!-- /.page-header -->
@@ -106,35 +106,40 @@
             <form class="form-horizontal" role="form" action="__SELF__" method="post">
                 <!-- #section:elements.form -->
                 <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 组名</label>
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 规则名称</label>
 
                     <div class="col-sm-9">
-                        <input id="form-field-1"  class="col-xs-10 col-sm-5" type="text" name="title"
-                               value="{$group.title}">
+                        <input id="form-field-1" placeholder="规则名称" class="col-xs-10 col-sm-5" type="text" name="title">
                     </div>
                 </div>
-                <div class="form-group" >
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 规则</label>
+
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="规则" class="col-xs-10 col-sm-5" type="text" name="name">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 状态</label>
 
-                    <div class="col-sm-1" >
-                        <input id="radio-1" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="1" <?php if($group['status']==1) echo "checked='checked'" ;?>>启用
+                    <div class="col-sm-1">
+                        <input id="form-field-1" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="1" checked="checked">启用
                     </div>
                     <div class="col-sm-1">
-                        <input id="radio-2" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="0" <?php if($group['status']==0) echo "checked='checked'" ;?>>禁用
+                        <input id="form-field-1" placeholder="状态" class="col-xs-2 col-sm-2" type="radio" name="status" value="0">禁用
                     </div>
                 </div>
-                <div class="row">
-                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">权限</label>
-                    <volist name="glist" id="g">
-                        <label class="checkbox-inline">
-                            <input type="checkbox"  name="rules[]" value="{$g.id}" aa="{$g.id}">{$g.title}
-                        </label>
-                    </volist>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 条件</label>
+
+                    <div class="col-sm-9">
+                        <input id="form-field-1" placeholder="条件" class="col-xs-10 col-sm-5" type="text" name="condition">
+                    </div>
                 </div>
                 <!-- /section:elements.form -->
                 <div class="clearfix form-actions">
                     <div class="col-md-offset-3 col-md-9">
-                        <button class="btn btn-info" type="submit" name='id' value="{$group.id}">
+                        <button class="btn btn-info" type="submit">
                             <i class="ace-icon fa fa-check bigger-110"></i>
                             提交
                         </button>
