@@ -11,16 +11,20 @@
 	<script type="text/javascript" src="__PUBLIC__/js/base.js"></script>
 </head>
 <body class="easyui-layout">
-	<div data-options="region:'north',border:false" style="height:60px;background:#B3DFDA;padding:10px">north region</div>
-	<div data-options="region:'west',split:true,title:'West'" style="width:150px;padding:10px;">
-		<div id="left-menu">
-			<div title="栏目一"> aaa</div>
-			<div title="栏目二">bbb</div>
-			<div title="栏目三">cccc</div>
+<div region="north" style="height: 100px;"></div>
+<div region="west" style="width:200px;" title="导航菜单">
+	<div id="menu" >
+		<div title="用户管理">
+			<div id="user-menu">
+			</div>
+		</div>
+		<div title="权限管理">
+
 		</div>
 	</div>
-	<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>
-	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
-	<div data-options="region:'center',title:'Center'"></div>
+</div>
+<div region="center">
+	<table id="dg"></table>
+</div>
 </body>
 </html>

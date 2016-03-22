@@ -14,8 +14,12 @@ class UserController extends CommonController {
      */
   public function user(){
       $user=D('Members');
-      $this->assign('userinfo',$user->userInfo());
-      $this->display();
+      $rows=I('post.rows');
+      $page=I('post.page');
+      $data=$user->userInfo($page,$rows);
+      //$this->assign('userinfo',$user->userInfo());
+      sleep(1);
+      $this->ajaxReturn($data);
   }
     /**
      * 添加用户

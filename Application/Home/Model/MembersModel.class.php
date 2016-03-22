@@ -45,12 +45,9 @@ class MembersModel extends RelationModel{
 	/**获取用户列表
 	 * @return 用户信息
 	 */
-	public function userInfo($id=false){
+	public function userInfo($page,$rows){
 		$group=M('members');
-		if($id){
-			return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->where("a
-			.id=$id")->order('a.id asc')->select();
-		}else{
+		if($page&&$rows){
 			return $group->alias('a')->field('a.id,a.name,a.nickname,a.status,a.remark,a.create_time,a.update_time,c.title,c.id as gid')->join('left join think_auth_group_access b on a.id=b.uid')->join('left join think_auth_group c on b.group_id=c.id')->order('a.id asc')->select();
 		}
 
