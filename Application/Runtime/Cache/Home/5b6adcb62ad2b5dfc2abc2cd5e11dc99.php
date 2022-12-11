@@ -21,7 +21,7 @@
   <body>
   <div class="container">
 
-    <form class="form-signin" action="/thinkphp/Home/Login/index" method="post">
+    <form class="form-signin" action="/thinkphp/Home/Login/index.html" method="post">
       <h2 class="form-signin-heading text-center ">请登录后使用</h2>
       <label for="account" class="sr-only">帐号</label>
       <input type="text" id="account" name="username" class="form-control" placeholder="帐号" required autofocus>

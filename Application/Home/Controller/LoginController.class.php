@@ -1,55 +1,47 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: huahua
+ * Date: 2016/2/27
+ * Time: 21:32
+ */
 namespace Home\Controller;
 use Think\Controller;
-use Org\Util\Rbac;
-class LoginController extends Controller {
+class LoginController extends Controller{
+    /**
+     * 登录方法，以user表的name为条件，与post数据对比找出user，判断密码相符后将id写入session，供auth判断权限。
+     */
     public function index(){
-        if(IS_POST){
-            if(empty($_POST['username'])) {
-                $this->error('帐号错误！');
-            }elseif (empty($_POST['password'])){
-                $this->error('密码必须！');
-            }
-            //生成认证条件
-            $map = array();
-            // 支持使用绑定帐号登录
-            $map['account'] = $_POST['username'];
-            $map["status"] = array('gt',0);
-            //使用用户名、密码和状态的方式进行认证
-            $authInfo = RBAC::authenticate($map);
-            if(false === $authInfo) {
-                $this->error('帐号不存在或已禁用！');
-            }else {
-                if($authInfo['password'] != md5($_POST['password'])) {
-                    $this->error('密码错误！');
-                }
-                $_SESSION[C('USER_AUTH_KEY')] =    $authInfo['id'];
-                if($authInfo['account'] == C('ADMIN_AUTH_KEY')) {
-                    $_SESSION['admin'] = true;
-                }
-                //保存登录信息
-                $User =    M('User');
-                $ip    = get_client_ip();
-                $time =    time();
-                $data = array();
-                $data['id']    = $authInfo['id'];
-                $data['last_login_time'] = $time;
-                $data['login_count'] = array('exp','login_count+1');
-                $data['last_login_ip'] = $ip;
-                $User->save($data);
-                // 缓存访问权限
-                RBAC::saveAccessList();
-                //var_dump($authInfo);
-                //var_dump($_SESSION[C('ADMIN_AUTH_KEY')]);
-                //var_dump(MODULE_NAME);
-                $this->success('登录成功！', U('/'));
-            }
-        }else{
-            $this->display();
+        if(session('?uid')){
+            redirect(U('Home/Index/index'));
         }
+        if(IS_POST){
+            $map['name']=I('post.username');
+            $pass=md5(I('post.password'));
+            $members=M('members');
+            $result=$members->where($map)->find();
+            if(!$result){
+                $this->error('账号不存在！！！',U('Home/Login/index'));
+            }
+            if($pass!=$result['password']){
+                print_r($pass);
+                print_r($result['password']);
+                $this->error('密码错误',U('Home/Login/index'));
+            }
+            if($result['status']==0){
+                $this->error('账号已禁用',U('Home/Login/index'));
+            }
+            session(array('name'=>'session_id','expire'=>3600));
+            session('uid',$result['id']);
+            session('username',$result['name']);
+            session('nickname',$result['nickname']);
+            redirect(U('Home/Index/index'),1,'登录成功，跳转中');
+
+        }
+        $this->display();
     }
     public function quit(){
-        session(null);
-        $this->success('成功退出','index');
+        session('[destroy]'); // 销毁session
+        redirect(U('Home/Login/index'),1,'成功退出');
     }
 }

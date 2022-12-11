@@ -1,0 +1,234 @@
+[ 2016-03-19T11:28:06+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:28:06+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:40:11+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:40:11+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:47:06+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:47:06+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:47:26+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:47:26+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:47:38+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:47:38+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:51:39+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:51:39+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:52:25+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:52:25+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:52:43+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:52:43+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:53:11+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:53:11+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:54:34+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:54:34+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:55:23+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:55:23+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T11:55:46+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T11:55:46+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:00:01+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:00:01+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:02:15+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:02:15+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:02:49+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:02:50+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:03:33+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:03:33+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:03:50+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:03:50+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
+[ 2016-03-19T13:04:06+08:00 ] 127.0.0.1 /thinkphp/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+
+[ 2016-03-19T13:04:07+08:00 ] 127.0.0.1 /thinkphp/Home/demo.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant ture - assumed 'ture' D:\wamp\www\thinkphp\Application\Home\Conf\config.php 第 14 行.
+ERR: 无法加载控制器:Demo.css
+
